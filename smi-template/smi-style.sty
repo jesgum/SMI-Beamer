@@ -1,0 +1,81 @@
+\mode<presentation>
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
+
+% smi colors
+\definecolor{SMIgreen}{RGB}{132,189,0}
+\definecolor{SMIdarkcyan}{RGB}{0,140,149}
+\definecolor{SMIdarkgreen}{RGB}{54,130,63}
+\definecolor{SMIred}{RGB}{187,24,25}
+\definecolor{SMIgray}{RGB}{128,128,127}
+\definecolor{SMIblue}{RGB}{0,97,161}
+\definecolor{OEAWblue}{RGB}{52,92,173}
+
+\setbeamercolor{section in foot}{bg=SMIgreen, fg=white}      % Left box (author name)
+\setbeamercolor{subsection in foot}{bg=white, fg=black}  % Middle box (title)
+\setbeamercolor{section in foot right}{bg=SMIdarkcyan, fg=white} % Right box (date and slide numbers)
+\setbeamercolor{title}{bg=white, fg=SMIblue}
+\setbeamercolor{frametitle}{bg=white,fg=SMIblue}
+\setbeamercolor{block title}{bg=SMIblue,fg=white}
+\setbeamercolor{block body}{bg=SMIgray!10,fg=black}
+
+
+\setbeamercolor{item}{fg=SMIblue}
+\setbeamercolor{structure}{bg=SMIblue,fg=black}
+
+\setlist[itemize,1]{label=\textcolor{SMIblue}{\rule{1ex}{1ex}}}
+\setlist[enumerate,1]{label=\textcolor{SMIblue}{\arabic*.}}
+
+\setbeamercolor{palette primary}{fg=black,bg=SMIblue}
+\setbeamercolor{palette secondary}{fg=white,bg=SMIgreen}
+\setbeamercolor{palette tertiary}{fg=black,bg=SMIdarkcyan}
+\setbeamercolor{palette quaternary}{fg=white,bg=black}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{section in toc}[sections numbered]
+
+
+\setbeamerfont{frametitle}{size=\huge}
+\setbeamerfont{block title}{size=\Large}
+
+
+\renewcommand{\insertlogo}{
+    \begin{textblock*}{2cm}(14.8cm,0.2cm) % Adjust width and position as needed
+        \includegraphics[height=1cm]{smi-template/more-logos/SMI.jpg}
+    \end{textblock*}
+}
+
+\addtobeamertemplate{background canvas}{
+    \ifnum\insertpagenumber=1
+      % Skip logo on the title slide (page 1)
+    \else
+        \insertlogo
+    \fi
+}
+
+
+
+% bottom line
+\makeatletter
+\setbeamertemplate{footline}
+{
+    \leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{section in foot}%
+        \usebeamerfont{} Jesper K. Gumprecht
+    \end{beamercolorbox}%
+
+    \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in foot}%
+        \usebeamerfont{title in head/foot} Status of "Fast simulations"
+    \end{beamercolorbox}%
+
+    \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,right]{section in foot right}%
+        \today \hspace*{12ex} \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+    \end{beamercolorbox}}%
+    \vskip0pt%
+}
+\makeatother
+
+
+\setbeamerfont{itemize item}{size=\small} % Adjust itemize font size
+\setbeamerfont{itemize subitem}{size=\small} % Adjust subitem font size
+\setbeamerfont{caption}{size=\small} % Adjust caption font size
