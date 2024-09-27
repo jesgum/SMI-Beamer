@@ -1,0 +1,3 @@
+#  ignore extra files from local compilation
+main.*
+!main.tex
