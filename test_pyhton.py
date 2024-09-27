@@ -1,0 +1,1 @@
+print ('SMI template: Work on progress...')
