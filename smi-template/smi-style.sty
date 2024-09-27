@@ -24,6 +24,7 @@
 \setbeamercolor{structure}{bg=SMIblue,fg=black}
 
 \setlist[itemize,1]{label=\textcolor{SMIblue}{\rule{1ex}{1ex}}}
+\setlist[itemize,2]{label=\textcolor{SMIblue}{$\boldsymbol{-}$}}
 \setlist[enumerate,1]{label=\textcolor{SMIblue}{\arabic*.}}
 
 \setbeamercolor{palette primary}{fg=black,bg=SMIblue}
@@ -35,8 +36,10 @@
 
 
 \setbeamerfont{frametitle}{size=\huge}
-\setbeamerfont{block title}{size=\Large}
+\setbeamerfont{block title}{size=\large}
 
+
+\newcommand{\tcol}[1]{\textcolor{SMIblue}{#1}}
 
 \renewcommand{\insertlogo}{
     \begin{textblock*}{2cm}(14.8cm,0.2cm) % Adjust width and position as needed
@@ -61,11 +64,11 @@
     \leavevmode%
     \hbox{%
     \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{section in foot}%
-        \usebeamerfont{} Jesper K. Gumprecht
+        \usebeamerfont{} Presenter name
     \end{beamercolorbox}%
 
     \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in foot}%
-        \usebeamerfont{title in head/foot} Status of "Fast simulations"
+        \usebeamerfont{title in head/foot} Conference / Title % Or somthing else. Presenter preference
     \end{beamercolorbox}%
 
     \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,right]{section in foot right}%
@@ -79,3 +82,11 @@
 \setbeamerfont{itemize item}{size=\small} % Adjust itemize font size
 \setbeamerfont{itemize subitem}{size=\small} % Adjust subitem font size
 \setbeamerfont{caption}{size=\small} % Adjust caption font size
+
+
+\newcommand{\thankyou}{
+    \vfill
+    \begin{center}
+    \huge \tcol{Thank you for your attention!}
+    \end{center}
+}
