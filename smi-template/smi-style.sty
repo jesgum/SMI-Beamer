@@ -17,13 +17,20 @@
 \setbeamercolor{title}{bg=white, fg=SMIblue}
 \setbeamercolor{frametitle}{bg=white,fg=SMIblue}
 \setbeamercolor{block title}{bg=SMIblue,fg=white}
+
+%option for body background color
 \setbeamercolor{block body}{bg=SMIgray!10,fg=black}
+%\setbeamercolor{block body}{bg=SMIblue!15,fg=black}
+
 
 
 \setbeamercolor{item}{fg=SMIblue}
 \setbeamercolor{structure}{bg=SMIblue,fg=black}
 
+% square vs round bullets
 \setlist[itemize,1]{label=\textcolor{SMIblue}{\rule{1ex}{1ex}}}
+% \setlist[itemize,1]{label=\textcolor{SMIblue}{\textbullet}}
+
 \setlist[itemize,2]{label=\textcolor{SMIblue}{$\boldsymbol{-}$}}
 \setlist[itemize,3]{label=\textcolor{SMIblue}{$\rightarrow$}}
 \setlist[enumerate,1]{label=\textcolor{SMIblue}{\arabic*.}}
@@ -90,4 +97,19 @@
     \begin{center}
     \huge \tcol{Thank you for your attention!}
     \end{center}
+}
+
+% Backup slides
+\newcommand{\backupbegin}{
+   \newcounter{finalframe}
+   \setcounter{finalframe}{\value{framenumber}}
+    \begin{frame}
+    \begin{center}
+    \Huge \tcol{Backup}
+    \end{center}
+    \end{frame}
+}
+
+\newcommand{\backupend}{
+   \setcounter{framenumber}{\value{finalframe}}
 }
